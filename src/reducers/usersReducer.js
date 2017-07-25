@@ -9,6 +9,7 @@ export default function reducer(state ={
 			return {...state, fetching: true}
 		}
 		case "FETCH_USERS_FULFILLED":{
+			console.info("DATA RECEIVED", action.payload);
 			return {...state, fetching: false, fetched: true, users: action.payload}
 		}
 		case "FETCH_USERS_REJECTED":{
